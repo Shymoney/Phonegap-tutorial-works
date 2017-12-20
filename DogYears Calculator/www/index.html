@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+        <script >
+        	window.onload= function(){
+        		document.getElementById("calculate").addEventListener('click', calcAge );
+        	}
+
+        	function calcAge(e){
+        		var age = document.getElementById('age').value;
+        		var age = age * 7;
+        		var result = "In dog years, your dog is : " + age+ "Years"; 
+        		document.getElementById('Result').innerHTML = result;
+        	}
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <h2>
+        	DogYears Calculator
+        </h2>
+       		<label for="Years"> Dog Years</label>
+        	<input type="number" name="Years" id="age"><br><br>
+        	<button id="calculate">
+        		Calculator
+        	</button>
+        
+        <div id="Result"></div>
+    </body>
+</html>
